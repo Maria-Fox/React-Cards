@@ -19,7 +19,7 @@ const Deck = () => {
         let deckId = res.data.deck_id
         setDeckId(deckId);
   
-        console.log("deck id is: ", deckId)
+        // console.log("deck id is: ", deckId)
       } catch (e) {
         console.log(e);
       }
@@ -51,7 +51,7 @@ const Deck = () => {
   return (
     <div>
       {/* {deckId} */}
-      <button className = "Deck-button" onClick = {() => drawCard(deckId)} > { {deckId} ? "Draw Card" : "Start Game"} </button>
+      <button className = "Deck-button" onClick = {() => drawCard(deckId)} > { {deckId} ? "Draw Single Card" : "Start Game"} </button>
 
       <div>
       {deckOfCards.map(cardImg => {
